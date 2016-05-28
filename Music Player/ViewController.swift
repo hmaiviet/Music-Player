@@ -80,8 +80,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate{
         self.sld_Duration.value = Float(audio.currentTime/audio.duration)
     }
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
-        playing = true
         addThumbImgForButton()
+        playing = false
     }
     
     func addThumbImgForButton(){
